@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer - Simplr</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/simplr-logo.jpg" alt="Simplr Logo" style="height: 2.2rem; width: auto; vertical-align: middle;" />
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="todo.html">To-Do</a></li>
+                    <li><a href="pomodoro.html" class="active">Timer</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="pomodoro-section">
+            <h2>⏱ Pomodoro Timer</h2>
+            
+            <div class="timer-settings">
+                <div class="setting-group">
+                    <label>Work Time (minutes)</label>
+                    <div class="time-control">
+                        <button id="workDecrement">-</button>
+                        <span id="workTime">25</span>
+                        <button id="workIncrement">+</button>
+                    </div>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Break Time (minutes)</label>
+                    <div class="time-control">
+                        <button id="breakDecrement">-</button>
+                        <span id="breakTime">5</span>
+                        <button id="breakIncrement">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-display">
+                <div class="timer-circle">
+                    <div class="timer-text">
+                        <span id="timerDisplay">25:00</span>
+                        <span id="timerMode">Work Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-controls">
+                <button id="startBtn" class="primary-btn">Start</button>
+                <button id="pauseBtn" class="secondary-btn">Pause</button>
+                <button id="resetBtn" class="secondary-btn">Reset</button>
+            </div>
+
+            <div class="session-stats">
+                <span id="sessionCount">Sessions: 0</span>
+            </div>
+        </section>
+
+        <aside class="ad-section">
+            <div class="image-row">
+                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Simplr. Enjey A., Seb M., Dani S., Paulo T.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/pomodoro.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - Simplr</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/simplr-logo.jpg" alt="Simplr Logo" style="height: 2.2rem; width: auto; vertical-align: middle;" />
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="todo.html">To-Do</a></li>
+                    <li><a href="pomodoro.html">Timer</a></li>
+                    <li><a href="notes.html" class="active">Notes</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="notes-section">
+            <h2>📝 Notes</h2>
+            
+            <div class="notes-controls">
+                <button id="addNoteBtn" class="primary-btn">+ New Note</button>
+                <div class="search-notes">
+                    <input type="text" id="searchNotesInput" placeholder="Search notes...">
+                </div>
+            </div>
+
+            <div class="notes-grid" id="notesGrid">
+                <!-- Notes will be dynamically added here -->
+            </div>
+        </section>
+
+        <aside class="ad-section">
+            <div class="image-row">
+                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+            </div>
+        </aside>
+    </main>
+
+    <!-- Note Modal -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">New Note</h3>
+            <input type="text" id="noteTitle" placeholder="Note title..." maxlength="50">
+            <textarea id="noteContent" placeholder="Write your note here..." rows="10"></textarea>
+            <div class="modal-actions">
+                <button id="saveNoteBtn" class="primary-btn">Save</button>
+                <button id="cancelNoteBtn" class="secondary-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Simplr. Enjey A., Seb M., Dani S., Paulo T.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/notes.js"></script>
+</body>
+</html>
