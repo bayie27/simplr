@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
                 navMenu.style.display = 'none';
+                if (hamburger) {
+                    hamburger.classList.remove('active'); // Remove active/open class if used
+                }
             }
         });
     });

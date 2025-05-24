@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simplr</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -37,24 +42,27 @@
                 <h2><span class="welcome-solid">Welcome to</span> <span class="simplr-gradient">Simplr</span></h2>
                 <p>Your lightweight, distraction-free productivity companion. No account, no complex setup - just simple tools to help you stay focused and organized.</p>
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>✅ To-Do Lists</h3>
-                        <p>Organize your tasks efficiently</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>⏱ Pomodoro Timer</h3>
-                        <p>Focus with time management</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📝 Notes</h3>
-                        <p>Capture your thoughts instantly</p>
-                    </div>
+                    <a href="todo.html" class="feature-card" style="text-decoration: none;">
+                        <div class="feature-title-row"><i class="fas fa-list-check fa-2x"></i><h3><strong>To-Do List</strong></h3></div>
+                        <p>Plan, prioritize, and track your daily tasks with ease.</p>
+                    </a>
+                    <a href="pomodoro.html" class="feature-card" style="text-decoration: none;">
+                        <div class="feature-title-row"><i class="fas fa-clock fa-2x"></i><h3><strong>Pomodoro Timer</strong></h3></div>
+                        <p>Boost your focus using structured work and break intervals.</p>
+                    </a>
+                    <a href="notes.html" class="feature-card" style="text-decoration: none;">
+                        <div class="feature-title-row"><i class="fas fa-note-sticky fa-2x"></i><h3><strong>Notes</strong></h3></div>
+                        <p>Capture ideas, reminders, and thoughts instantly and efficiently.</p>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="video-section">
-            <h3><strong>Productivity Tip</strong></h3>
+            <div class="feature-title-row" style="justify-content: center; margin-bottom: 1.5rem;">
+                <i class="fas fa-lightbulb fa-2x"></i>
+                <h3><strong>Productivity Tip</strong></h3>
+            </div>
             <div class="video-container">
                 <iframe 
                     src="https://www.youtube.com/embed/3kKB6wYqP7Y?si=lc60JD4iPlF-umS8" 

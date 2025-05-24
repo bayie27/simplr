@@ -50,6 +50,16 @@ body {
     color: var(--text-main);
     background: linear-gradient(135deg, var(--neutral-bg) 0%, var(--neutral-card) 100%);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.container {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 .container {
@@ -206,6 +216,44 @@ body {
 .feature-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+}
+
+.feature-card i {
+    color: var(--simplr-bluegreen);
+    margin-bottom: 1rem;
+    display: block;
+    transition: color 0.2s;
+}
+
+.feature-card:hover i {
+    color: var(--simplr-blue);
+}
+
+.feature-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-title-row h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.feature-title-row i {
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 2.25rem;
+    color: var(--simplr-bluegreen);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.feature-title-row i:hover {
+    color: var(--simplr-blue);
+    transform: scale(1.15) rotate(-8deg);
 }
 
 /* Video Section */
@@ -925,6 +973,33 @@ footer {
     .timer-settings {
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-menu {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem;
+        border-top: 1px solid var(--neutral-border);
+    }
+    .nav-menu a {
+        font-size: 1.15rem;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        text-align: center;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
     }
     
     .timer-circle {
@@ -985,6 +1060,22 @@ footer {
         font-size: 2rem;
     }
     
+    .timer-settings {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-menu a {
+        font-size: 1.25rem;
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+    
     .timer-circle {
         width: 180px;
         height: 180px;
@@ -1033,4 +1124,28 @@ html {
     -webkit-text-fill-color: initial !important;
     background-clip: initial !important;
     font-weight: 800;
+}
+
+h3 {
+    color: #332f31;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .form-actions button {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
 }
