@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const taskIndex = tasks.findIndex(task => task.id === taskId);
         if (taskIndex !== -1) {
             tasks[taskIndex].completed = !tasks[taskIndex].completed;
-            tasks[taskIndex].updatedAt = new Date().toISOString();
+            // Do NOT update updatedAt here
             saveTasks();
             renderTasks();
         }

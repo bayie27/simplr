@@ -10,14 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close mobile menu when clicking on a link
+    // Close mobile menu and redirect when clicking on a link
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
                 navMenu.style.display = 'none';
                 if (hamburger) {
-                    hamburger.classList.remove('active'); // Remove active/open class if used
+                    hamburger.classList.remove('active');
+                }
+                // Only redirect if not already on the page
+                if (window.location.pathname.split('/').pop() !== this.getAttribute('href')) {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        window.location.href = this.getAttribute('href');
+                    }, 150);
+                } else {
+                    e.preventDefault();
                 }
             }
         });

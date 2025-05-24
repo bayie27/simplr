@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const displayName = name || 'Anonymous';
         summaryText.innerHTML = `
             <strong>Name:</strong> ${displayName}<br>
-            <strong>Message:</strong> ${message}<br>
+            <strong>Message:</strong> <span class="summary-message">${message}</span><br>
             <strong>Submitted:</strong> ${formatDate(feedback.submittedAt)}<br><br>
             Your feedback has been saved locally and will help us improve Simplr!
         `;

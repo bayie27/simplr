@@ -813,6 +813,15 @@ input:focus, textarea:focus {
     font-weight: 700;
 }
 
+.summary-message {
+  display: inline-block;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
 /* Feedback History Styles */
 .feedback-history {
     margin-top: 3rem;
@@ -1148,4 +1157,33 @@ h3 {
     margin: 0 auto;
     font-size: 1.1rem;
   }
+}
+
+/* Limit name and title lengths */
+#taskInput,
+#userName,
+#noteTitle {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-content strong,
+.feedback-header strong,
+.note-title {
+  display: inline-block;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* Add spacing below section titles */
+.todo-section h2,
+.pomodoro-section h2,
+.notes-section h2,
+.feedback-section h2 {
+  margin-bottom: 1.25rem;
 }
