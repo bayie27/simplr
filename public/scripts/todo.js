@@ -80,11 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const li = document.createElement('li');
         li.className = `task-item ${task.completed ? 'completed' : ''}`;
         
+        // Show 'Edited:' if updatedAt != createdAt
+        const isEdited = task.updatedAt && task.updatedAt !== task.createdAt;
         li.innerHTML = `
             <div class="task-content">
                 <strong>${task.text}</strong>
                 <div style="font-size: 0.8rem; color: #666; margin-top: 0.25rem;">
-                    Created: ${formatDate(task.createdAt)}
+                    ${isEdited ? 'Edited' : 'Created'}: ${formatDate(isEdited ? task.updatedAt : task.createdAt)}
                 </div>
             </div>
             <div class="task-actions">

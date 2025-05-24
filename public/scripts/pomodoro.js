@@ -145,20 +145,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         settings.sessions++;
                         updateSessionCount();
                         saveSettings();
-                        
-                        // Show alert and auto-start break when OK is clicked
-                        alert('Work session completed! Time for a break!');
-                        
-                        // Switch to break time and auto-start
+                        // Switch to break time and reset timer BEFORE alert
                         isWorkTime = false;
                         currentTime = settings.breakTime * 60;
                         updateTimerDisplay();
-                        
-                        // Auto-start break timer
-                        setTimeout(() => {
-                            startTimer();
-                        }, 100);
-                        
+                        // Show alert and start break only after alert is dismissed
+                        alert('Work session completed! Time for a break!');
+                        // Start break timer only after alert is dismissed
+                        startTimer();
                     } else {
                         // Break completed
                         alert('Break time over! Ready for another work session?');
