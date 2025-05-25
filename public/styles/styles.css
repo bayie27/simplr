@@ -44,10 +44,6 @@ main.container {
     flex: 1 0 auto;
 }
 
-footer {
-    flex-shrink: 0;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -87,6 +83,12 @@ footer {
     display: flex;
     list-style: none;
     gap: 0.5rem;
+    position: static;
+    background: none;
+    flex-direction: row;
+    padding: 0;
+    border-top: none;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -921,11 +923,18 @@ input:focus, textarea:focus {
 
 /* Footer */
 footer {
+    /* Remove fixed/static positioning */
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Use 100% for flush sides */
     background: linear-gradient(135deg, var(--simplr-violet), var(--simplr-blue));
     color: #fff;
     text-align: center;
-    margin-top: 1rem;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0; /* Remove top curve for flush look */
+    z-index: 1000;
+    margin: 0;
+    box-shadow: none;
 }
 
 /* Responsive Design */
@@ -953,8 +962,8 @@ footer {
         flex-direction: column;
         padding: 1rem;
         border-top: 1px solid var(--neutral-border);
+        gap: 0;
     }
-    
     .hero-content h2 {
         font-size: 2.25rem;
     }
@@ -977,18 +986,6 @@ footer {
         align-items: center;
         justify-content: center;
         text-align: center;
-    }
-    .nav-menu {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 1rem;
-        border-top: 1px solid var(--neutral-border);
     }
     .nav-menu a {
         font-size: 1.15rem;
@@ -1119,6 +1116,93 @@ footer {
     .feature-title-row i {
         font-size: 1.2rem;
     }
+  .todo-controls {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: stretch;
+  }
+  .add-task {
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .add-task input {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  .search-task {
+    min-width: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .task-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .task-list {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-right: 0;
+    font-size: 0.95rem;
+  }
+  .task-content {
+    margin-right: 0;
+    font-size: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .task-actions {
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  /* Feedback list (repeat for clarity) */
+  .feedback-list {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  .feedback-card {
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .feedback-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .feedback-header strong {
+    font-size: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .feedback-date {
+    font-size: 0.85rem;
+    margin-left: 0;
+  }
+  .feedback-message {
+    font-size: 0.95rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+  }
 }
 
 /* Smooth scrolling */
