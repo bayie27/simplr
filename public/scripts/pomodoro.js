@@ -178,12 +178,33 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetTimer() {
         isRunning = false;
         clearInterval(timerInterval);
-        isWorkTime = true;
-        currentTime = settings.workTime * 60;
+        currentTime = isWorkTime ? settings.workTime * 60 : settings.breakTime * 60; // Keep the current timer type
         updateTimerDisplay();
         updateButtonStates();
     }
     
+    // Add reset button functionality
+    const resetSessionBtn = document.createElement('button');
+    resetSessionBtn.innerHTML = '<i class="fas fa-undo-alt"></i>'; // Use Font Awesome icon
+    resetSessionBtn.title = 'Reset Sessions'; // Add tooltip for clarity
+    resetSessionBtn.className = 'secondary-btn';
+    resetSessionBtn.addEventListener('click', () => {
+        settings.sessions = 0;
+        updateSessionCount();
+        saveSettings();
+    });
+    sessionCount.parentNode.appendChild(resetSessionBtn); // Add button next to session count
+    
     // Initial timer display
     updateTimerDisplay();
+    
+    // Make timer circle clickable
+    const timerCircle = document.querySelector('.timer-circle');
+    timerCircle.addEventListener('click', () => {
+        if (!isRunning) {
+            isWorkTime = !isWorkTime; // Toggle between work and break time
+            currentTime = isWorkTime ? settings.workTime * 60 : settings.breakTime * 60;
+            updateTimerDisplay();
+        }
+    });
 });

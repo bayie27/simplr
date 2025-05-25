@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
             <div class="task-actions">
-                <button class="complete-btn" onclick="toggleTask('${task.id}')">
+                <button class="complete-btn" onclick="toggleTask('${task.id}')" title="${task.completed ? 'Mark as pending' : 'Mark as completed'}">
                     ${task.completed ? 'Undo' : 'Complete'}
                 </button>
-                <button class="edit-btn" onclick="editTask('${task.id}')">Edit</button>
-                <button class="delete-btn" onclick="deleteTask('${task.id}')">Delete</button>
+                <button class="edit-btn" onclick="editTask('${task.id}')" title="Edit this task">Edit</button>
+                <button class="delete-btn" onclick="deleteTask('${task.id}')" title="Delete this task">Delete</button>
             </div>
         `;
         

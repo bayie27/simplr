@@ -43,37 +43,37 @@
             <form id="feedbackForm" class="feedback-form">
                 <div class="form-group">
                     <label for="userName">Name (Optional)</label>
-                    <input type="text" id="userName" placeholder="Your name..." maxlength="50">
+                    <input type="text" id="userName" placeholder="Your name..." maxlength="50" title="Enter your name (optional)">
                 </div>
                 
                 <div class="form-group">
                     <label for="userMessage">Message *</label>
-                    <textarea id="userMessage" placeholder="Share your feedback..." rows="6" required></textarea>
+                    <textarea id="userMessage" placeholder="Share your feedback..." rows="6" required title="Enter your feedback or suggestion"></textarea>
                 </div>
                 
                 <div class="form-actions">
-                    <button type="submit" class="primary-btn">Submit Feedback</button>
-                    <button type="button" id="viewFeedbackBtn" class="secondary-btn">View Previous Feedback</button>
+                    <button type="submit" class="primary-btn" title="Submit your feedback">Submit Feedback</button>
+                    <button type="button" id="viewFeedbackBtn" class="secondary-btn" title="View all previous feedback submissions">View Previous Feedback</button>
                 </div>
             </form>
 
-            <div id="submissionSummary" class="submission-summary" style="display: none;">
+            <div id="submissionSummary" class="submission-summary" style="display: none;" title="Thank you message after submitting feedback">
                 <h3>Thank you for your feedback!</h3>
                 <p id="summaryText"></p>
             </div>
 
-            <div id="feedbackHistory" class="feedback-history" style="display: none;">
+            <div id="feedbackHistory" class="feedback-history" style="display: none;" title="List of all previous feedback submitted on this device">
                 <h3>Previous Feedback</h3>
                 <div id="feedbackList" class="feedback-list"></div>
-                <button id="clearFeedbackBtn" class="secondary-btn">Clear All Feedback</button>
+                <button id="clearFeedbackBtn" class="secondary-btn" title="Clear all saved feedback">Clear All Feedback</button>
             </div>
         </section>
 
         <aside class="ad-section">
             <div class="image-row">
-                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image">
-                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image">
-                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
+                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
+                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
             </div>
         </aside>
     </main>

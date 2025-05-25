@@ -44,39 +44,39 @@
                 <div class="setting-group">
                     <label>Work Time (minutes)</label>
                     <div class="time-control">
-                        <button id="workDecrement">-</button>
-                        <span id="workTime">25</span>
-                        <button id="workIncrement">+</button>
+                        <button id="workDecrement" title="Decrease work time">-</button>
+                        <span id="workTime" title="Current work time in minutes">25</span>
+                        <button id="workIncrement" title="Increase work time">+</button>
                     </div>
                 </div>
                 
                 <div class="setting-group">
                     <label>Break Time (minutes)</label>
                     <div class="time-control">
-                        <button id="breakDecrement">-</button>
-                        <span id="breakTime">5</span>
-                        <button id="breakIncrement">+</button>
+                        <button id="breakDecrement" title="Decrease break time">-</button>
+                        <span id="breakTime" title="Current break time in minutes">5</span>
+                        <button id="breakIncrement" title="Increase break time">+</button>
                     </div>
                 </div>
             </div>
 
             <div class="timer-display">
-                <div class="timer-circle">
+                <div class="timer-circle" title="Click to switch between work and break timer when paused">
                     <div class="timer-text">
-                        <span id="timerDisplay">25:00</span>
-                        <span id="timerMode">Work Time</span>
+                        <span id="timerDisplay" title="Current timer countdown">25:00</span>
+                        <span id="timerMode" title="Current timer mode">Work Time</span>
                     </div>
                 </div>
             </div>
 
             <div class="timer-controls">
-                <button id="startBtn" class="primary-btn">Start</button>
-                <button id="pauseBtn" class="secondary-btn">Pause</button>
-                <button id="resetBtn" class="secondary-btn">Reset</button>
+                <button id="startBtn" class="primary-btn" title="Start the timer">Start</button>
+                <button id="pauseBtn" class="secondary-btn" title="Pause the timer">Pause</button>
+                <button id="resetBtn" class="secondary-btn" title="Reset the current timer">Reset</button>
             </div>
 
             <div class="session-stats">
-                <span id="sessionCount">Sessions: 0</span>
+                <span id="sessionCount" title="Number of completed work sessions">Sessions: 0</span>
             </div>
         </section>
 

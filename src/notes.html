@@ -41,9 +41,9 @@
             <h2><i class="fas fa-note-sticky"></i> Notes</h2>
             
             <div class="notes-controls">
-                <button id="addNoteBtn" class="primary-btn">+ New Note</button>
+                <button id="addNoteBtn" class="primary-btn" title="Create a new note">+ New Note</button>
                 <div class="search-notes">
-                    <input type="text" id="searchNotesInput" placeholder="Search notes...">
+                    <input type="text" id="searchNotesInput" placeholder="Search notes..." title="Search your notes by title or content">
                 </div>
             </div>
 
@@ -54,9 +54,9 @@
 
         <aside class="ad-section">
             <div class="image-row">
-                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image">
-                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image">
-                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image">
+                <img src="images/coke-1.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
+                <img src="images/coke-2.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
+                <img src="images/coke-3.jpg" alt="Coca-Cola Advertisement" class="ad-image" title="Coca-Cola Advertisement">
             </div>
         </aside>
     </main>
@@ -64,13 +64,13 @@
     <!-- Note Modal -->
     <div id="noteModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modalTitle">New Note</h3>
-            <input type="text" id="noteTitle" placeholder="Note title..." maxlength="50">
-            <textarea id="noteContent" placeholder="Write your note here..." rows="10"></textarea>
+            <span class="close" title="Close">&times;</span>
+            <h3 id="modalTitle" title="Note modal title">New Note</h3>
+            <input type="text" id="noteTitle" placeholder="Note title..." maxlength="50" title="Enter the note title (max 50 characters)">
+            <textarea id="noteContent" placeholder="Write your note here..." rows="10" title="Enter your note content"></textarea>
             <div class="modal-actions">
-                <button id="saveNoteBtn" class="primary-btn">Save</button>
-                <button id="cancelNoteBtn" class="secondary-btn">Cancel</button>
+                <button id="saveNoteBtn" class="primary-btn" title="Save this note">Save</button>
+                <button id="cancelNoteBtn" class="secondary-btn" title="Cancel and close">Cancel</button>
             </div>
         </div>
     </div>

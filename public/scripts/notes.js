@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 notes[noteIndex].title = title;
                 notes[noteIndex].content = content;
                 notes[noteIndex].updatedAt = new Date().toISOString();
+                notes[noteIndex].title = `Edited: ${notes[noteIndex].title}`; // Add 'Edited:' prefix
             }
         } else {
             // Create new note
@@ -132,12 +133,12 @@ document.addEventListener('DOMContentLoaded', function() {
         div.className = 'note-card';
         
         div.innerHTML = `
-            <div class="note-date">${formatDate(note.updatedAt)}</div>
-            <div class="note-title">${note.title}</div>
-            <div class="note-content">${note.content}</div>
+            <div class="note-date" title="Last updated: ${formatDate(note.updatedAt)}">${formatDate(note.updatedAt)}</div>
+            <div class="note-title" title="${note.title}">${note.title}</div>
+            <div class="note-content" title="${note.content}">${note.content}</div>
             <div class="note-actions">
-                <button class="edit-btn" onclick="editNote('${note.id}')">Edit</button>
-                <button class="delete-btn" onclick="deleteNote('${note.id}')">Delete</button>
+                <button class="edit-btn" onclick="editNote('${note.id}')" title="Edit this note">Edit</button>
+                <button class="delete-btn" onclick="deleteNote('${note.id}')" title="Delete this note">Delete</button>
             </div>
         `;
         

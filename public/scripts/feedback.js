@@ -113,11 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const feedbackCard = document.createElement('div');
             feedbackCard.className = 'feedback-card';
             feedbackCard.innerHTML = `
-                <div class="feedback-header">
-                    <strong>${feedback.name}</strong>
-                    <span class="feedback-date">${formatDate(feedback.submittedAt)}</span>
+                <div class="feedback-header" title="Feedback from ${feedback.name} on ${formatDate(feedback.submittedAt)}">
+                    <strong title="Feedback author">${feedback.name}</strong>
+                    <span class="feedback-date" title="Date submitted">${formatDate(feedback.submittedAt)}</span>
                 </div>
-                <div class="feedback-message">${feedback.message}</div>
+                <div class="feedback-message" title="Feedback message">${feedback.message}</div>
             `;
             feedbackList.appendChild(feedbackCard);
         });
@@ -164,4 +164,11 @@ document.addEventListener('DOMContentLoaded', function() {
             counter.style.color = '#9ca3af';
         }
     });
+    
+    // Add tooltips to form controls
+    userName.setAttribute('title', 'Enter your name (optional)');
+    userMessage.setAttribute('title', 'Enter your feedback or suggestion');
+    feedbackForm.querySelector('button[type="submit"]').setAttribute('title', 'Submit your feedback');
+    viewFeedbackBtn.setAttribute('title', 'View all previous feedback submissions');
+    clearFeedbackBtn.setAttribute('title', 'Clear all saved feedback');
 });
