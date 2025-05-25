@@ -1100,6 +1100,10 @@ footer {
         min-width: 0;
         max-width: 100%;
     }
+    .video-container {
+    padding-bottom: 60%;
+    border-radius: 16px;
+    }
     /* Smaller Productivity Tip section and icons */
     .video-section .feature-title-row h3 {
         font-size: 1rem;
